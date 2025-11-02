@@ -1,12 +1,18 @@
 /* Add this CSS file to each page for a consistent look*/
 /* Add @Import for personal font */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
-    font-family: 'TODO: FONT NAME', sans-serif;
+    font-family: 'Raleway', sans-serif;
     padding: 0;
     margin: 0;
     background-color: var(--md-sys-color-background);
     transition: background-color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Courier Prime', sans-serif;
+    color: var(--md-sys-color-on-background);
 }
 
 body p{
