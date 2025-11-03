@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <script src="/javascript/toggle_theme.js"></script>
+        <script src="/javascript/quiz.js"></script>
         <link rel="stylesheet" href="css/material_design.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/index.css">
@@ -10,7 +11,7 @@
         <meta name="description" content="Quizzit, Short but fun quiz game">
         <title>Quizzit, Short but fun quiz game</title>
     </head>
-    <body onload="setTheme()">
+    <body onload="setTheme(), SetQuestion()">
         <header id="header">
             <a href="../index.html">
                 <div id="logo">
@@ -31,26 +32,26 @@
         <main>
             <article class="card">
                 <div class="card_header">
-                    <img id="question_img" src="/images/quiz/Beauty_and_the_boss_album_art.webp">
-                    <h3 id="sub_heading">Which One?</h3>
-                    <h2 id="question">'Which artist spent over $5k on their album, but lost everything because Spotify detected 'illegal Streams'</h2>
+                    <img id="question_img" src="">
+                    <h3 id="sub_heading"></h3>
+                    <h2 id="question"></h2>
                 </div>
                 <ul>
-                    <li class="answer_bar">
-                        <img src="/images/quiz/taylor_swift_portrait.webp">
-                        <p>Taylor Swift</p>
+                    <li class="answer_bar" onclick="reponce(1)">
+                        <img id="btn_img_one" src="">
+                        <p id="btn_text_one"></p>
                     </li>
-                    <li class="answer_bar">
-                        <img src="/images/quiz/charli_xcx_portrait.webp">
-                        <p>Charli XCX</p>
+                    <li class="answer_bar" onclick="reponce(2)">
+                        <img id="btn_img_two" src="">
+                        <p id="btn_text_two"></p>
                     </li>
-                    <li class="answer_bar">
-                        <img src="/images/quiz/karra_portrait.webp">
-                        <p>KARRA</p>
+                    <li class="answer_bar" onclick="reponce(3)">
+                        <img id="btn_img_three" src="">
+                        <p id="btn_text_three"></p>
                     </li>
-                    <li class="answer_bar">
-                        <img src="/images/quiz/nicki_manaj_portrait.webp">
-                        <p>Nicki Minaj</p>
+                    <li class="answer_bar" onclick="reponce(4)">
+                        <img id="btn_img_four" src="">
+                        <p id="btn_text_four"></p>
                     </li>
                 </ul>
             </article>
