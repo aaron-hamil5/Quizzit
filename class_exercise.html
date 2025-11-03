@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Error Demo</title>
+</head>
+<body>
+  <h2>JavaScript Error Types Demo</h2>
+  <button onclick="runErrors()">Run Errors</button>
+
+  <script>
+    function runErrors() {
+      let message = "Hello" console.log(message) //need to use the + operator
+      console.log(notDefinedVariable); //This variable is not defined so nothing can load
+      let arr = new Array(-5); // -5 Is an invalid range only 0 - infinity
+      let num = 10;
+      if (num = 5) { //= means set, you want == to check
+        console.log("Number is 5");
+      } else {
+        console.log("Number is not 5");
+      }
+    }
+  </script>
+</body>
+</html>
