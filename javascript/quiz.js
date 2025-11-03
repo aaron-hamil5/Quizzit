@@ -67,6 +67,8 @@ class Question{
 
 let answer = 0
 let i = 0
+let answered = false
+let score = 0
 
 const questions =[
     new Question(
@@ -87,7 +89,7 @@ const questions =[
         "Nicki Minaj",
 
         3,
-        "<p>KARRA released her debut album The Beauty and the Boss.<br>One of her songs started getting a big spike in streams.<br>Spotify and her distributor, DistroKid, flagged it as “illegal streams” (thinking the plays were fake).<br>Without warning, they took down her whole album.<br>KARRA decided to fight back by stopping future releases on streaming platforms.</p>"
+        "KARRA released her debut album The Beauty and the Boss.One of her songs started getting a big spike in streams. Spotify and her distributor, DistroKid, flagged it as “illegal streams” (thinking the plays were fake). Without warning, they took down her whole album. KARRA decided to fight back by stopping future releases on streaming platforms."
     ),
     new Question(
         "/images/quiz/question_two_imagery.webp",
@@ -107,7 +109,7 @@ const questions =[
         "Harshdeep Kaur",
 
         1,
-        "<p>Raja Kumari has co-written some great songs <br>'Centuries' by Fall Out Boy<br>'Change Your Life' by Iggy Azalea<br>'Goddess' by Krewella, NERVO <br>'Renegade' on Arcane League of Legends </p>"
+        "Raja Kumari has co-written some great songs: 'Centuries' by Fall Out Boy, 'Change Your Life' by Iggy Azalea,'Goddess' by Krewella, NERVO, and 'Renegade' on Arcane League of Legends"
     ),
     new Question(
         "/images/quiz/youtube_logo.webp",
@@ -127,7 +129,7 @@ const questions =[
         "Linus Tech Tips",
 
         4,
-        "<p>Linus Tech Tips (LTT), known for its consistent and high-volume upload schedule, faced significant criticism over declining quality assurance and factual errors in mid-2023. The situation escalated following a public report highlighting these issues, leading the company to issue a formal apology and implement a week-long production break (known as 'Restructure'). This pause was used to re-evaluate internal processes, prioritise accuracy and quality over speed, and publicly commit to stricter quality control moving forward. </p>"
+        "Linus Tech Tips (LTT), known for its consistent and high-volume upload schedule, faced significant criticism over declining quality assurance and factual errors in mid-2023. The situation escalated following a public report highlighting these issues, leading the company to issue a formal apology and implement a week-long production break (known as 'Restructure'). This pause was used to re-evaluate internal processes, prioritise accuracy and quality over speed, and publicly commit to stricter quality control moving forward."
     ),
     new Question(
         "/images/quiz/",
@@ -147,7 +149,7 @@ const questions =[
         "Apple iPhone Air",
 
         2,
-        "<p>Jerry did his usual test to check the durability of the current device compared to the last generation. When he bent the phone in its unfolded mode. The device gave up where the antenna line lied. While fidgeting with the device, the battery gets punctured and then the device starts to smoke and the battery reacted badly and heated up. He got very lucky the device didn’t catch on flames.</p>"
+        "<Jerry did his usual test to check the durability of the current device compared to the last generation. When he bent the phone in its unfolded mode. The device gave up where the antenna line lied. While fidgeting with the device, the battery gets punctured and then the device starts to smoke and the battery reacted badly and heated up. He got very lucky the device didn’t catch on flames."
     ),
     new Question(
         "/images/quiz/",
@@ -166,8 +168,28 @@ const questions =[
         "/images/quiz/",
         "Nintendo",
 
-        2,
-        "<p>Jerry did his usual test to check the durability of the current device compared to the last generation. When he bent the phone in its unfolded mode. The device gave up where the antenna line lied. While fidgeting with the device, the battery gets punctured and then the device starts to smoke and the battery reacted badly and heated up. He got very lucky the device didn’t catch on flames.</p>"
+        1,
+        "The initial announcement of the Xbox One was widely seen by consumers as a catastrophic failure, essentially spelling the console's death before arrival. Microsoft's reveal focused heavily on TV and entertainment features while promoting extremely unpopular policies like mandatory constant internet connectivity and severe restrictions on used games. This event severely damaged the Xbox brand's reputation; the only thing keeping the ecosystem strong today is the success of its smart subscription service, Xbox Game Pass."
+    ),
+    new Question(
+        "",
+        "You're done",
+        "Well Done!, How did you do?",
+
+        "",
+        "",
+
+        "",
+        "",
+
+        "",
+        "",
+
+        "",
+        "",
+
+        0,
+        "",
     )
 ]
 
@@ -210,14 +232,23 @@ function LoadQuestionBoard(
 
 function Response(response){
     if(response === answer){
-        console.log("Correct")
-        Progress()
+        console.log("Correct");
+        document.getElementById("info_text").textContent = "Well Done, " + questions[i].detailed_reason;
+        score++;
+        document.getElementById("score").textContent = score + "/5";
     } else {
         console.log("Womp Womp")
+        document.getElementById("info_text").textContent = "Wrong! " + questions[i].detailed_reason;
     }
+    answered = true
 }
 
 function Progress(){
-    i++
-    SetQuestion()
+    if (answered) {
+        i++
+        document.getElementById("info_text").textContent = "";
+
+        SetQuestion()
+        answered = false
+    }
 }

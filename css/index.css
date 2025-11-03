@@ -79,3 +79,9 @@ article ul li img:hover{
     overflow: hidden;
     position: relative;
 }
+
+.info_row{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+}
