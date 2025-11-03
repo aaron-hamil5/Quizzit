@@ -132,40 +132,40 @@ const questions =[
         "Linus Tech Tips (LTT), known for its consistent and high-volume upload schedule, faced significant criticism over declining quality assurance and factual errors in mid-2023. The situation escalated following a public report highlighting these issues, leading the company to issue a formal apology and implement a week-long production break (known as 'Restructure'). This pause was used to re-evaluate internal processes, prioritise accuracy and quality over speed, and publicly commit to stricter quality control moving forward."
     ),
     new Question(
-        "/images/quiz/",
+        "/images/quiz/durability_test.webp",
         "Which One?",
         "Which device’s battery got punctured when JerryRigEverything did his bend test.",
 
-        "/images/quiz/",
+        "/images/quiz/nokia_3310.webp",
         "Nokia 3310",
 
-        "/images/quiz/",
+        "/images/quiz/pixel_10_pro_fold.webp",
         "Google Pixel 10 Pro Fold",
 
-        "/images/quiz/",
+        "/images/quiz/fold7.webp",
         "Samsung Galaxy Z Fold7",
 
-        "/images/quiz/",
+        "/images/quiz/iphone_air.webp",
         "Apple iPhone Air",
 
         2,
-        "<Jerry did his usual test to check the durability of the current device compared to the last generation. When he bent the phone in its unfolded mode. The device gave up where the antenna line lied. While fidgeting with the device, the battery gets punctured and then the device starts to smoke and the battery reacted badly and heated up. He got very lucky the device didn’t catch on flames."
+        "Jerry did his usual test to check the durability of the current device compared to the last generation. When he bent the phone in its unfolded mode. The device gave up where the antenna line lied. While fidgeting with the device, the battery gets punctured and then the device starts to smoke and the battery reacted badly and heated up. He got very lucky the device didn’t catch on flames."
     ),
     new Question(
-        "/images/quiz/",
+        "/images/quiz/console_wars.webp",
         "Which One?",
         "Which company was doing so well with their console and then royally ruined it with their next generation.",
 
-        "/images/quiz/",
+        "/images/quiz/microsoft_logo.webp",
         "Microsoft",
 
-        "/images/quiz/",
+        "/images/quiz/sony_logo.webp",
         "Sony",
 
-        "/images/quiz/",
+        "/images/quiz/google_logo.webp",
         "Google",
 
-        "/images/quiz/",
+        "/images/quiz/nintendo_logo.webp",
         "Nintendo",
 
         1,
